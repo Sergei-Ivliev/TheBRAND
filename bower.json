@@ -1,0 +1,21 @@
+{
+  "name": "BRAND TEST",
+  "homepage": "https://littlebear.000webhostapp.com/",
+  "authors": [
+    "Sergei-Ivliev"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}

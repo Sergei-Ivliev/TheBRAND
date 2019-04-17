@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+  <link rel="stylesheet" type="text/css" href="less/style.css">
+  <title>The Brand</title>
+</head>
+
+<body>
+<header class="header">
+  <div class="header-flex container">
+    <div class="headerLeft">
+      <div class="logotype">
+        <a class="logo-link" href="#">
+          <img src="images/logo.png" alt="logo">
+          <span>BRAN</span>
+        </a>
+      </div>
+      <div class="browse-box">
+        <button class="browse" type="button">Browse ▼</button>
+        <div class="drop-down">
+          <h3 class="mega-menu__heading">Women</h3>
+          <ul>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Blazers</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Denim</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Leggings/Pants</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Skirts/Shorts</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Accessories</a></li>
+          </ul>
+          <h3 class="mega-menu__heading">Men</h3>
+          <ul>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tees/Tank tops</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Shirts/Polos</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweatshirts/Hoodies</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Blazers</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/vests</a></li>
+          </ul>
+        </div>
+      </div>
+      <input type="text" name="textfield" placeholder="Search for item">
+      <button class="search" type="submit"><img src="images/search.png" alt="search"></button>
+    </div>
+    <div class="headerRight">
+      <a href="html/shopping_cart.html"><img src="images/basket.svg" alt="basket"></a>
+      <details>
+        <summary class="myaccount">
+          My Account&nbsp;&nbsp;
+        </summary>
+      </details>
+      <div class="minCartWrap">
+        <span class="spanCart1">Quantity of items:&nbsp;<span id="qantityMin"></span></span><br>
+        <span class="spanCart1">Total Amount:&nbsp;<span id="amountMin"></span></span><br>
+      </div>
+    </div>
+  </div>
+  <nav class="navigation container">
+    <ul class="menu container">
+      <li><a class="menu-point" href="#">home</a></li>
+      <li><a class="menu-point" href="html/new_arrivals.html">man</a></li>
+      <li class="mega-menu-open">
+        <a class="menu__link menu-point" href="#">Women</a>
+        <div class="mega-menu">
+          <div class="mega-flex">
+            <h3 class="mega-menu__heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Blazers</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Denim</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Leggings/Pants</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Skirts/Shorts</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="mega-flex">
+            <h3 class="mega-menu__heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+            </ul>
+            <h3 class="mega-menu__heading second-heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+            </ul>
+          </div>
+          <div class="mega-flex">
+            <h3 class="mega-menu__heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+            </ul>
+          </div>
+        </div>
+      <li><a class="menu-point" href="#">kids</a></li>
+      <li><a class="menu-point" href="#">accoseriese</a></li>
+      <li><a class="menu-point" href="#">featured</a></li>
+      <li><a class="menu-point" href="#">hot deals</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="theBrand container">
+  <div class="brd">
+    <div class="brand-style1">
+      THE BRAND
+    </div>
+    <div class="brand-style2">
+      OF LUXERIOUS <span>FASHION</span>
+    </div>
+  </div>
+  <div class="brand-slide">
+    <img src="images/photo-boy.png" alt="photo-boy">
+  </div>
+</div>
+<div class="container main-content">
+  <div class="deals">
+    <div class="content-left">
+      <div class="deals-img overImg542">
+        <a class="hot-deal-img" href="javascript: void(0);">
+          <img src="images/content-pict/left-top.png" alt="pic">
+        </a>
+        <div class="deals-label">
+          hot deal<br>
+          <span>for men</span>
+        </div>
+      </div>
+      <div class="deals-img overImg261">
+        <a class="hot-deal-img" href="javascript: void(0);">
+          <img src="images/content-pict/left-bottom.png" alt="pic">
+        </a>
+        <div class="deals-label">
+          LUXIROUS &amp; trendy<br>
+          <span>ACCESORIES</span>
+        </div>
+      </div>
+    </div>
+    <div class="content-right">
+      <div class="deals-img overImg261">
+        <a class="hot-deal-img" href="javascript: void(0);">
+          <img src="images/content-pict/right-top.png" alt="pic">
+        </a>
+        <div class="deals-label">
+          30% offer<br>
+          <span>women</span>
+        </div>
+      </div>
+      <div class="deals-img overImg542">
+        <a class="hot-deal-img" href="javascript: void(0);">
+          <img src="images/content-pict/right-bottom.png" alt="pic">
+        </a>
+        <div class="deals-label">
+          new arrivals<br>
+          <span>for kids</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="featured-items">
+    <h2>Featured Items</h2>
+    <span>Shop for items based on what we featured in this week</span>
+  </div>
+  <div class="featured container">
+    <div class="featured-card"
+         data-idProduct="ind_01"
+         data-productName="MANGO PEOPLE T-SHIRT i1"
+         data-price=52
+         data-subtotalPrice=52
+         data-href="single_page.html"
+         data-img="images/featured/01.jpg"
+         data-quantity=1
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/01.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $52.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_02"
+         data-productName="MANGO PEOPLE T-SHIRT i2"
+         data-price="53"
+         data-subtotalPrice="53"
+         data-href="single_page.html"
+         data-img="images/featured/02.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/02.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $53.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_03"
+         data-productName="MANGO PEOPLE T-SHIRT i3"
+         data-price="54"
+         data-subtotalPrice="54"
+         data-href="single_page.html"
+         data-img="images/featured/05.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/05.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $54.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_04"
+         data-productName="MANGO PEOPLE T-SHIRT i4"
+         data-price="55"
+         data-subtotalPrice="55"
+         data-href="single_page.html"
+         data-img="images/featured/04.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/04.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $55.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_05"
+         data-productName="MANGO PEOPLE T-SHIRT i5"
+         data-price="56"
+         data-subtotalPrice="56"
+         data-href="single_page.html"
+         data-img="images/featured/05.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/05.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $56.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_06"
+         data-productName="MANGO PEOPLE T-SHIRT i6"
+         data-price="57"
+         data-subtotalPrice="57"
+         data-href="single_page.html"
+         data-img="images/featured/06.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/06.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $57.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_07"
+         data-productName="MANGO PEOPLE T-SHIRT i7"
+         data-price="58"
+         data-subtotalPrice="58"
+         data-href="single_page.html"
+         data-img="images/featured/07.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/07.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $58.00
+        </div>
+      </div>
+    </div>
+    <div class="featured-card"
+         data-idProduct="ind_08"
+         data-productName="MANGO PEOPLE T-SHIRT i8"
+         data-price="59"
+         data-subtotalPrice="59"
+         data-href="single_page.html"
+         data-img="images/featured/05.jpg"
+         data-quantity="1"
+         data-alt="img">
+      <div class="add-tocart">
+        <a href="javascript: void(0);">
+          <img src="images/basket%20white.png" alt="cartPic">
+          Add to Cart
+        </a>
+      </div>
+      <a class="featured-card-img" href="html/single_page.html">
+        <img src="images/featured/08.jpg" alt="pic">
+      </a>
+      <div class="featured-card-info">
+        <div class="model">
+          Mango People T-shirt
+        </div>
+        <div class="price">
+          $59.00
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a href="#" class="browse-all">Browse All Product &rArr;</a>
+  </div>
+</div>
+<div class="offer-slide">
+  <img src="images/offer/offer.jpg" alt="pic">
+  <div class="offer-30">
+    <div class="line-1">
+      30% <span>OFFER</span>
+    </div>
+    <div class="line-2">
+      FOR WOMEN
+    </div>
+  </div>
+  <div class="offer-pic">
+    <img src="images/offer/Forma_1.png" alt="pic">
+    <img src="images/offer/Forma_2.png" alt="pic">
+    <img src="images/offer/Forma_3.png" alt="pic">
+  </div>
+  <div class="offer-text-right">
+    <h3>Free Delivery</h3>
+    <p>Worldwide delivery on all. Authorit<br>
+      tively morph next-generation innov<br>
+      ation with extensive models.</p>
+    <h3>Sales &amp; discounts</h3>
+    <p>Worldwide delivery on all. Authorit<br>
+      tively morph next-generation innov<br>
+      ation with extensive models.</p>
+    <h3>Quality assurance</h3>
+    <p>Worldwide delivery on all. Authorit<br>
+      tively morph next-generation innov<br>
+      ation with extensive models.</p>
+  </div>
+</div>
+<footer class="footer container">
+  <div class="footer-head-slider">
+    <div class="footer-head-slider-content">
+      <div class="footer-head-left">
+        <div class="fase">
+          <img src="images/subscribe-slider/fase.png" alt="fase">
+        </div>
+        <div class="footer-head-text">
+          <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+            a pulvinar purus condimentum
+            a. Aliquam condimentum mattis neque sed pretium”
+          </p>
+          <span class="Bin_Burhan">Bin Burhan</span>
+          <span class="Dhaka">Dhaka, Bd</span>
+          <div class="color-string">
+            <img src="images/subscribe-slider/wblock.png" alt="pic">
+            <img src="images/subscribe-slider/rblock.png" alt="pic">
+            <img src="images/subscribe-slider/wblock.png" alt="pic">
+          </div>
+        </div>
+      </div>
+      <div class="footer-head-right">
+        <span class="Subscribe-title">Subscribe</span>
+        <span class="Subscribe-text">FOR OUR NEWLETTER AND PROMOTION</span>
+        <div class="email-form">
+          <input id="email" placeholder="Enter Your Email">
+          <div class="subscribe-button">
+            <input type="submit" value="Subscribe">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info-brand">
+    <div class="i-brand">
+      <div class="logotype">
+        <a class="logo-link" href="#">
+          <img src="images/logo.png" alt="logo">
+          <span>BRAN</span>
+        </a>
+      </div>
+      <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+        syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded
+        array of processes and cross-unit partnerships.
+      </p>
+      <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+        Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+      </p>
+    </div>
+    <div class="i-info">
+      <h3>company</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="i-info">
+      <h3>information</h3>
+      <ul>
+        <li><a href="#">Tearms &amp; Condition</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">How to Buy</a></li>
+        <li><a href="#">How to Sell</a></li>
+        <li><a href="#">Promotion</a></li>
+      </ul>
+    </div>
+    <div class="i-info">
+      <h3>shop categogy</h3>
+      <ul>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Child</a></li>
+        <li><a href="#">Apparel</a></li>
+        <li><a href="#">Brows All</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copywrite">
+    <div class="footer-copywrite-content">
+      <span class="copy">&copy; 2019 Brand All Rights Reserved.</span>
+      <div class="social-block">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/mainIndex.js"></script>
+<script src="js/cart3.js"></script>
+<script src="js/product.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+
+</html>

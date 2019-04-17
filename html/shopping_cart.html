@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../bower_components/jquery-ui/themes/base/all.css">
+  <link rel="stylesheet" type="text/css" href="../less/style.css">
+  <title>Shopping-cart</title>
+</head>
+
+<body>
+<header class="header">
+  <div class="container header-flex">
+    <div class="headerLeft">
+      <div class="logotype">
+        <a class="logo-link" href="../index.html">
+          <img src="../images/logo.png" alt="logo">
+          <span>BRAN</span>
+        </a>
+      </div>
+      <div class="browse-box">
+        <button class="browse" type="button">Browse ▼</button>
+        <div class="drop-down">
+          <h3 class="mega-menu__heading">Women</h3>
+          <ul>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Blazers</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Denim</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Leggings/Pants</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Skirts/Shorts</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Accessories</a></li>
+          </ul>
+          <h3 class="mega-menu__heading">Men</h3>
+          <ul>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tees/Tank tops</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Shirts/Polos</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweatshirts/Hoodies</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Blazers</a></li>
+            <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/vests</a></li>
+          </ul>
+        </div>
+      </div>
+      <input type="text" name="textfield" placeholder="Search for item">
+      <button class="search" type="submit"><img src="../images/search.png" alt="search"></button>
+    </div>
+    <div class="headerRight">
+      <a href="#" id="cart"><img src="../images/basket.svg" alt="cart"></a>
+      <details>
+        <summary class="myaccount">
+          My Account&nbsp;&nbsp;
+        </summary>
+      </details>
+      <div class="minCartWrap">
+        <span class="spanCart1">Quantity of items:&nbsp;<span id="qantityMin"></span></span><br>
+        <span class="spanCart1">Total Amount:&nbsp;$&nbsp;<span id="amountMin"></span></span><br>
+      </div>
+    </div>
+  </div>
+  <nav class="navigation container">
+    <ul class="menu container">
+      <li><a class="menu-point" href="../index.html">home</a></li>
+      <li><a class="menu-point" href="../html/new_arrivals.html">man</a></li>
+      <li class="mega-menu-open">
+        <a class="menu__link menu-point" href="#">Women</a>
+        <div class="mega-menu">
+          <div class="mega-flex">
+            <h3 class="mega-menu__heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Blazers</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Denim</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Leggings/Pants</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Skirts/Shorts</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="mega-flex">
+            <h3 class="mega-menu__heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+            </ul>
+            <h3 class="mega-menu__heading second-heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+            </ul>
+          </div>
+          <div class="mega-flex">
+            <h3 class="mega-menu__heading">Women</h3>
+            <ul>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Dresses</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Tops</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Sweaters/Knits</a></li>
+              <li class="mega-menu__list"><a class="mega-menu__link" href="#">Jackets/Coats</a></li>
+            </ul>
+          </div>
+        </div>
+      <li><a class="menu-point" href="#">kids</a></li>
+      <li><a class="menu-point" href="#">accoseriese</a></li>
+      <li><a class="menu-point" href="#">featured</a></li>
+      <li><a class="menu-point" href="#">hot deals</a></li>
+    </ul>
+  </nav>
+</header>
+<header class="main-header">
+  <div class="main-header-content">
+    <h3>new arrivals</h3>
+    <nav class="main-header-nav">
+      <h4>
+        <a href="../index.html">home/</a>
+        <a href="#">man/</a>
+        <a href="new_arrivals.html">new arrivals</a>
+      </h4>
+    </nav>
+  </div>
+</header>
+<section class="product-shopping-cart container">
+  <article class="cart-items">
+
+    <div class="product-in-cart-title">
+      <div class="product-in-cart-details">
+        <h4>product details</h4>
+      </div>
+      <div class="product-in-cart-price">
+        <h4>unit price</h4>
+      </div>
+      <div class="product-in-cart-quantity">
+        <h4>quantity</h4>
+      </div>
+      <div class="product-in-cart-shipping">
+        <h4>shipping</h4>
+      </div>
+      <div class="product-in-cart-subtotal">
+        <h4>subtotal</h4>
+      </div>
+      <div class="product-in-cart-action">
+        <h4>action</h4>
+      </div>
+    </div>
+
+    <!--<div class="product-in-cart" data-price = "150" data-subtotalPrice = "150" data-quantity = "1">-->
+    <!--<div class="product-in-cart-details">-->
+    <!--<a class="product-cart-product" href="single_page.html">-->
+    <!--<img src="../images/shopping-pic/cart-pic1.jpg" alt="pic">-->
+    <!--</a>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-price">-->
+    <!--<span> </span>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-quantity">-->
+    <!--<input class="quantity-of-items" type="number" placeholder="1" value = "1">-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-shipping">-->
+    <!--free-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-subtotal">-->
+    <!--<span> </span>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-action">-->
+    <!--<i class="fas fa-times-circle" title="Delete item"></i>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart" data-price = "160" data-subtotalPrice = "160" data-quantity = "1">-->
+    <!--<div class="product-in-cart-details">-->
+    <!--<a class="product-cart-product" href="single_page.html">-->
+    <!--<img src="../images/shopping-pic/cart-pic2.jpg" alt="pic">-->
+    <!--</a>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-price">-->
+    <!--<span> </span>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-quantity">-->
+    <!--<input class="quantity-of-items" type="number" placeholder="1" data-quantity="1">-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-shipping">-->
+    <!--free-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-subtotal">-->
+    <!--<span> </span>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-action">-->
+    <!--<i class="fas fa-times-circle" title="Delete item"></i>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart" data-price = "170" data-subtotalPrice = "170" data-quantity = "1">-->
+    <!--<div class="product-in-cart-details">-->
+    <!--<a class="product-cart-product" href="single_page.html">-->
+    <!--<img src="../images/shopping-pic/cart-pic3.jpg" alt="pic">-->
+    <!--</a>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-price">-->
+    <!--<span> </span>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-quantity">-->
+    <!--<input class="quantity-of-items" type="number" placeholder="1" data-quantity="1">-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-shipping">-->
+    <!--free-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-subtotal">-->
+    <!--<span> </span>-->
+    <!--</div>-->
+    <!--<div class="product-in-cart-action">-->
+    <!--<i class="fas fa-times-circle" title="Delete item"></i>-->
+    <!--</div>-->
+    <!--</div>-->
+  </article>
+  <article class="cart-inputs">
+    <div class="clear-continue">
+      <button id="clear-shopping" class="clear-shopping" type="submit">
+        clear shopping cart
+      </button>
+      <a class="continue-shopping" href="../index.html">
+        continue shopping
+      </a>
+    </div>
+    <div class="address-cupon-total">
+      <div class="shipping-address">
+        <h4>Shipping Address</h4>
+        <select title="" name="country" id="select-country">
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Namibia">Namibia</option>
+          <option value="Burundi">Burundi</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Kenya">Kenya</option>
+        </select>
+        <input type="text" placeholder="State">
+        <input type="number" placeholder="Postcode / Zip">
+        <button class="get-quote" type="submit">
+          get a quote
+        </button>
+      </div>
+      <div class="coupon-discount">
+        <h4>coupon discount</h4>
+        <p>Enter your coupon code if you have one</p>
+        <input id="discount" type="text" placeholder="Your coupon code ( try 10 )" value="">
+        <button id="apply-coupon" class="apply-coupon" type="submit">
+          Apply coupon
+        </button>
+      </div>
+      <div class="grand-total-block">
+        <div class="sub-total">
+          <h5>Sub total&nbsp;&nbsp; $&nbsp;</h5>
+          <div class="sub-total-sum">
+            <span id="sub-total-sum"></span>
+          </div>
+        </div>
+        <div class="grand-total">
+          <h4>grand total&nbsp;&nbsp; $&nbsp;</h4>
+          <div class="grand-total-sum">
+            <span id="grand-total-sum"></span>
+          </div>
+        </div>
+        <a class="proceed" href="checkout.html">
+          <h4>proceed to checkout</h4>
+        </a>
+      </div>
+    </div>
+
+  </article>
+</section>
+<footer>
+  <div class="footer-head-slider">
+    <div class="footer-head-slider-content">
+      <div class="footer-head-left">
+        <div class="fase">
+          <img src="../images/subscribe-slider/fase.png" alt="fase">
+        </div>
+        <div class="footer-head-text">
+          <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+            a pulvinar purus condimentum
+            a. Aliquam condimentum mattis neque sed pretium”
+          </p>
+          <span class="Bin_Burhan">Bin Burhan</span>
+          <span class="Dhaka">Dhaka, Bd</span>
+          <div class="color-string">
+            <img src="../images/subscribe-slider/wblock.png" alt="pic">
+            <img src="../images/subscribe-slider/rblock.png" alt="pic">
+            <img src="../images/subscribe-slider/wblock.png" alt="pic">
+          </div>
+        </div>
+      </div>
+      <div class="footer-head-right">
+        <span class="Subscribe-title">Subscribe</span>
+        <span class="Subscribe-text">FOR OUR NEWLETTER AND PROMOTION</span>
+        <div class="email-form">
+          <input id="email" placeholder="Enter Your Email">
+          <div class="subscribe-button">
+            <input type="submit" value="Subscribe">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info-brand">
+    <div class="i-brand">
+      <div class="logotype">
+        <a class="logo-link" href="../index.html">
+          <img src="../images/logo.png" alt="logo">
+          <span>BRAN</span>
+        </a>
+      </div>
+      <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+        syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
+        expanded
+        array of processes and cross-unit partnerships.
+      </p>
+      <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+        Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+      </p>
+    </div>
+    <div class="i-info">
+      <h3>company</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="i-info">
+      <h3>information</h3>
+      <ul>
+        <li><a href="#">Tearms &amp; Condition</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">How to Buy</a></li>
+        <li><a href="#">How to Sell</a></li>
+        <li><a href="#">Promotion</a></li>
+      </ul>
+    </div>
+    <div class="i-info">
+      <h3>shop categogy</h3>
+      <ul>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Child</a></li>
+        <li><a href="#">Apparel</a></li>
+        <li><a href="#">Brows All</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copywrite">
+    <div class="footer-copywrite-content">
+      <span class="copy">&copy; 2019 Brand All Rights Reserved.</span>
+      <div class="social-block">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/cart3.js"></script>
+<script src="../js/product.js"></script>
+<script src="../js/calculator.js"></script>
+</body>
+
+</html>
