@@ -24,15 +24,17 @@ $(document).ready(() => {
   });
 
   // Малая корзина
-  $('.headerRight').mouseenter(() => {
-    calculator._renderMinCart();
-  });
+  // На странице корзины не нужна
+
+  // $('.headerRight').mouseenter(() => {
+  //   calculator._renderMinCart();
+  // });
 
 
   // Добавление товара index.html
-  $('.add-tocart').click(event => {
-    cart.addProduct(event.currentTarget);
-  });
+  // $('.add-tocart').click(event => {
+  //   cart.addProduct(event.currentTarget);
+  // });
 
   // //Добавление товара
 

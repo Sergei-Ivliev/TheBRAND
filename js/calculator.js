@@ -49,7 +49,7 @@ const calculator = {
       minCartAmount += cartItems[i].subtotalPrice;
     }
     $('#amountMin').text(this._rounded(minCartAmount));
-    $('.minCartWrap').slideToggle();
+    $('.minCartWrap').fadeToggle();
   },
 
   _getDiscount: function () {

@@ -62,15 +62,11 @@ let getQuantity = function (event) {
   quantity.itemSubtotalPrice.dataset.subtotalprice = quantity.itemPrice.dataset.price * quantity.actualQuantity;
   calculator.renderCalc();
   renderPrice();
-  // console.log(quantity.itemSubtotalPriceSpan);
 };
 
 for (let i = 0; i < quantity.quantityInputs.length; i++) {
   quantity.quantityInputs[i].addEventListener('input', getQuantity);
 }
-
-// console.log(quantity.quantityInputs);
-// console.log(quantity.actualQuantity);
 
 const calculator = {
   subTotal: document.getElementById('sub-total-sum'),

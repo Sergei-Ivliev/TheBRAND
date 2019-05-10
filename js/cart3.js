@@ -43,11 +43,6 @@ class Cart {
     calculator._renderCalc();
   }
 
-  //
-  // renderCart() {
-  //
-  // }
-
 
   _renderItem(product) {
     let $productInCartMin = $('<div/>', {// Блок одного товара
@@ -78,7 +73,7 @@ class Cart {
   }
 
   addProduct(element) {
-console.log($(element.parentNode).data('idproduct'));
+    console.log($(element.parentNode).data('idproduct'));
     let product = {
       idProduct: $(element.parentNode).data('idproduct'),
       productName: $(element.parentNode).data('productname'),
@@ -93,7 +88,7 @@ console.log($(element.parentNode).data('idproduct'));
     let find = cartItems.find(product => product.idProduct === $(element.parentNode).data('idproduct'));
     if (!find) {
       cartItems.push(product);
-    this._renderItem(product);
+      this._renderItem(product);
     } else {
       find.quantity++;
       find.subtotalPrice = find.price * find.quantity - find.subtotalPrice / 100 * calculator.discount;
@@ -102,14 +97,5 @@ console.log($(element.parentNode).data('idproduct'));
     calculator._renderCalc();
     calculator._renderMinCart();
     console.log(`${calculator.grandTotal.text()}`);
-
-
-
-    // this._renderItem(product);
-
-    // console.log(cartItems);
-    // console.log($('.minProductData'));
-
-
   }
 }

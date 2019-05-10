@@ -4,13 +4,25 @@ $(document).ready(() => {
   let cart = new Cart('json/indexCart.json');
 
   // Малая корзина
-  $('.headerRight').mouseenter(() => {
-    calculator._renderMinCart();
+  function minCartListener() {
+    $('#theCart').mouseenter(() => {
+      calculator._renderMinCart();
+      $('#theCart').unbind("mouseenter");
+    });
+  }
+
+  minCartListener();
+
+  $('#closeMinCart').click(() => {
+    $('.minCartWrap').hide();
+    minCartListener();
   });
 
   // Добавление товара index.html
   $('.add-tocart').click(event => {
     cart.addProduct(event.currentTarget);
+    $('.minCartWrap').hide();
+    minCartListener();
   });
 
 
