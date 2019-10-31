@@ -1,0 +1,84 @@
+{
+  "contents": [
+    {
+      "idProduct": "new_001",
+      "productName": "MANGO PEOPLE T-SHIRT 1",
+      "price": 51,
+      "subtotalPrice": 51,
+      "href": "single_page.html",
+      "img": "images/featured/01.jpg",
+      "quantity": 1,
+      "alt": "ind_001"
+    },
+    {
+      "idProduct": "new_002",
+      "productName": "MANGO PEOPLE T-SHIRT 2",
+      "price": 52,
+      "subtotalPrice": 52,
+      "href": "single_page.html",
+      "img": "images/featured/02.jpg",
+      "quantity": 1,
+      "alt": "ind_002"
+    },
+    {
+      "idProduct": "new_003",
+      "productName": "MANGO PEOPLE T-SHIRT 3",
+      "price": 53,
+      "subtotalPrice": 53,
+      "href": "single_page.html",
+      "img": "images/featured/05.jpg",
+      "quantity": 1,
+      "alt": "ind_003"
+    },
+    {
+      "idProduct": "new_004",
+      "productName": "MANGO PEOPLE T-SHIRT 4",
+      "price": 54,
+      "subtotalPrice": 54,
+      "href": "single_page.html",
+      "img": "images/featured/04.jpg",
+      "quantity": 1,
+      "alt": "ind_004"
+    },
+    {
+      "idProduct": "ind_005",
+      "productName": "MANGO PEOPLE T-SHIRT 5",
+      "price": 55,
+      "subtotalPrice": 55,
+      "href": "single_page.html",
+      "img": "images/featured/05.jpg",
+      "quantity": 1,
+      "alt": "ind_005"
+    },
+    {
+      "idProduct": "ind_006",
+      "productName": "MANGO PEOPLE T-SHIRT 6",
+      "price": 56,
+      "subtotalPrice": 56,
+      "href": "single_page.html",
+      "img": "images/featured/06.jpg",
+      "quantity": 1,
+      "alt": "ind_006"
+    },
+    {
+      "idProduct": "ind_007",
+      "productName": "MANGO PEOPLE T-SHIRT 7",
+      "price": 57,
+      "subtotalPrice": 57,
+      "href": "single_page.html",
+      "img": "images/featured/07.jpg",
+      "quantity": 1,
+      "alt": "ind_007"
+    },
+    {
+      "idProduct": "ind_008",
+      "productName": "MANGO PEOPLE T-SHIRT 8",
+      "price": 58,
+      "subtotalPrice": 58,
+      "href": "single_page.html",
+      "img": "images/featured/08.jpg",
+      "quantity": 1,
+      "alt": "ind_008"
+    }
+  ]
+}
