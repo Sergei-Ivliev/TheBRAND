@@ -86,10 +86,6 @@ const calculator = {
     }
     this.discountSum = this.insertGrandTotal / 100 * discount.discount;
     this.actualGrandTotal = this.insertGrandTotal - this.discountSum;
-    // console.log(this.discountSum);
-    // console.log(this.insertSubTotal);
-    // console.log(this.insertGrandTotal);
-    // console.log(this.actualGrandTotal);
     this.subTotal.innerText = this.insertSubTotal;
     this.grandTotal.innerText = calculator.actualGrandTotal;
   },
@@ -101,7 +97,6 @@ const remove = {
   removeOneItem: function () {
     this.closest('.product-in-cart').remove();
     calculator.renderCalc();
-    // console.log(elements.productDiv);
   },
 
   removeAllItems: function () {

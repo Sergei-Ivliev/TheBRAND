@@ -22,17 +22,16 @@ class Cart {
                 this.subtotalPrice = cartItems[i].subtotalPrice,
                 this.href = cartItems[i].href,
                 this.img = cartItems[i].img,
-                this.quantity = cartItems[i].quantity)
+                this.quantity = cartItems[i].quantity);
           }
           calculator._renderCalc();
+          $('#markerSpan').text(cartItems.length);
         });
   }
 
   _remove(event) {
     event.target.closest('.product-in-cart').remove();
     let find = cartItems.find(product => product.idProduct === event.target.closest('.product-in-cart').dataset.id);
-    $('.product-in-cart-min')[cartItems.indexOf(find)].remove();
-    console.log(cartItems.indexOf(find));
     cartItems.splice(cartItems.indexOf(find), 1);
     calculator._renderCalc();
   }
@@ -44,12 +43,12 @@ class Cart {
   }
 
 
-  _renderItem(product) {
+  _renderItem(product) { // Отображение товаров в выпадающем блоке корзины ПРИ ДОБАВЛЕНИИ
     let $productInCartMin = $('<div/>', {// Блок одного товара
       class: 'product-in-cart-min',
       'data-name': product.productName,
       'data-price': product.price,
-      'data-subtotalPrise': product.subtotalprice,
+      'data-subtotalPrice': product.subtotalprice,
       'data-img': product.img,
       'data-quantity': product.quantity,
     });
@@ -63,17 +62,22 @@ class Cart {
     let $minProductData = $('<div/>', { // Данные товара
       class: 'minProductData'
     });
-    $productInCartMin.appendTo($('.minCartWrap'));
+    $productInCartMin.appendTo($('.minCartContent'));
     $minCartImage.appendTo($productInCartMin);
     $minProductData.appendTo($productInCartMin);
     $minProductData.append($(`<p>${product.productName}</p>`));
     $minProductData.append($(`<p>Price: $ ${product.price}</p>`));
-    $minProductData.append($(`<p></p>`));
+    $minProductData.append($(`<p>${product.subtotalPrice}</p>`));
     $minProductData.append($(`<p></p>`));
   }
 
-  addProduct(element) {
-    console.log($(element.parentNode).data('idproduct'));
+  _addProduct(element) {    // Добавление товара в корзину (на всех страницах)
+    console.log('ELEMENT: ' + $(element.parentNode).data('idproduct'));
+    // if (sessionStorage.getItem($(element.parentNode).datas('idproduct'))) {
+    //   sessionStorage[$(element.parentNode).data('quantity')]++;
+    // } else {
+    //   sessionStorage.setItem($(element.parentNode), 1);
+    // }
     let product = {
       idProduct: $(element.parentNode).data('idproduct'),
       productName: $(element.parentNode).data('productname'),
@@ -84,18 +88,20 @@ class Cart {
       quantity: 1,
       alt: $(element.parentNode).data('alt')
     };
+    // sessionStorage.setItem(product, 1);
+    // console.log(sessionStorage);
 
     let find = cartItems.find(product => product.idProduct === $(element.parentNode).data('idproduct'));
     if (!find) {
       cartItems.push(product);
+      console.log(cartItems);
       this._renderItem(product);
     } else {
-      find.quantity++;
       find.subtotalPrice = find.price * find.quantity - find.subtotalPrice / 100 * calculator.discount;
-      console.log(cartItems);
+      find.quantity++;
     }
     calculator._renderCalc();
     calculator._renderMinCart();
-    console.log(`${calculator.grandTotal.text()}`);
+    $('.minCartWrap').hide();
   }
 }

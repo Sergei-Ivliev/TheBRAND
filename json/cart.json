@@ -2,34 +2,34 @@
   "countGoods": 3,
   "contents": [
     {
-      "idProduct": "cart_001",
+      "idProduct": "narr_01",
       "productName": "MANGO PEOPLE T-SHIRT 1",
       "price": 52,
       "subtotalPrice": 52,
       "href": "new_arrivals.html",
-      "img": "../images/shopping-pic/cart-pic1.jpg",
+      "img": "images/New-arrivals/img-01.jpg",
       "quantity": 1,
-      "alt": "cart_001"
+      "alt": "narr_01"
     },
     {
-      "idProduct": "cart_002",
+      "idProduct": "narr_02",
       "productName": "MANGO PEOPLE T-SHIRT 2",
       "price": 53,
       "subtotalPrice": 53,
       "href": "new_arrivals.html",
-      "img": "../images/shopping-pic/cart-pic2.jpg",
+      "img": "images/New-arrivals/img-02.jpg",
       "quantity": 1,
-      "alt": "cart_002"
+      "alt": "narr_02"
     },
     {
-      "idProduct": "cart_003",
+      "idProduct": "narr_03",
       "productName": "MANGO PEOPLE T-SHIRT 3",
       "price": 54,
       "subtotalPrice": 54,
       "href": "new_arrivals.html",
-      "img": "../images/shopping-pic/cart-pic3.jpg",
+      "img": "images/New-arrivals/img-03.jpg",
       "quantity": 1,
-      "alt": "cart_003"
+      "alt": "narr_03"
     }
   ]
 }
