@@ -3,7 +3,7 @@ const calculator = {
   grandTotal: $('#grand-total-sum'),
   insertSubTotal: null,   //Переменная для вычисления sub суммы
   insertGrandTotal: null,   //Переменная для вычисления total суммы
-  discount: 0,
+  discount: 0,              //disсount по умолчанию
   actualGrandTotal: null,   //Переменная - итоговое значение total суммы
 
   _renderCalc: function () {
@@ -27,8 +27,7 @@ const calculator = {
     if ((find) && (event.target.value >= 1)) {
       find.quantity = event.target.value;
       find.subtotalPrice = find.price * event.target.value - (find.price * event.target.value / 100 * this.discount);
-      $('.inCartSubtoalSpan')[cartItems.indexOf(find)].textContent = (this._rounded(find.subtotalPrice));
-      console.log(cartItems);
+      $('.inCartSubtotalSpan')[cartItems.indexOf(find)].textContent = (this._rounded(find.subtotalPrice));
     } else {
       find.subtotalPrice = find.price;
       $(event.target).val(1);
@@ -36,10 +35,7 @@ const calculator = {
     this._renderCalc();
   },
 
-  _renderMinCart: function () {
-    console.log(cartItems);
-    console.log($('.minProductData'));
-    $('#qantityMin').text(cartItems.length);
+  _renderMinCart: function () {   // Отображение калькуляции в выпадающем блоке корзины
     for (let i = 0; i < $('.minProductData').length; i++) {
       $('.minProductData')[i].children[2].textContent = (`Quantity: ${cartItems[i].quantity}`);
       $('.minProductData')[i].children[3].textContent = (`Amount: $ ${cartItems[i].subtotalPrice}`);
@@ -48,8 +44,17 @@ const calculator = {
     for (let i = 0; i < cartItems.length; i++) {
       minCartAmount += cartItems[i].subtotalPrice;
     }
+
+    let cartQantity = null;
+    for (let i = 0; i < cartItems.length; i++) {
+      cartQantity += cartItems[i].quantity;
+    }
+
+    $('#markerSpan').text(cartQantity);
+    $('#quantityMin').text(cartQantity);
+
     $('#amountMin').text(this._rounded(minCartAmount));
-    $('.minCartWrap').fadeToggle();
+    $('.minCartWrap').fadeIn();
   },
 
   _getDiscount: function () {
@@ -61,7 +66,7 @@ const calculator = {
             this.discount = +data.discount;
             for (let i = 0; i < cartItems.length; i++) {
               cartItems[i].subtotalPrice = cartItems[i].subtotalPrice - cartItems[i].subtotalPrice / 100 * this.discount;
-              $('.inCartSubtoalSpan')[i].textContent = (this._rounded(cartItems[i].subtotalPrice));
+              $('.inCartSubtotalSpan')[i].textContent = (this._rounded(cartItems[i].subtotalPrice));
             }
           } else {
             this.discount = 0;

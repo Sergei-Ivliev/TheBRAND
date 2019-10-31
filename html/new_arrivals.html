@@ -54,15 +54,25 @@
     </div>
     <div class="headerRight">
       <a href="shopping_cart.html" id="theCart"><img src="../images/basket.svg" alt="basket"></a>
+      <span id="markerSpan">0</span>
       <details>
         <summary class="myaccount">
           My Account&nbsp;&nbsp;
         </summary>
       </details>
       <div class="minCartWrap">
-        <button id="closeMinCart"> X </button>
-        <span class="spanCart1">Quantity of items:&nbsp;<span id="qantityMin"></span></span><br>
-        <span class="spanCart1">Total Amount:&nbsp;$&nbsp;<span id="amountMin"></span></span><br>
+        <button id="closeMinCart"> X</button>
+        <span class="spanCart1">Quantity of items:&nbsp;<span id="quantityMin"></span></span><br>
+        <span class="spanCart1">Total Amount:&nbsp;<span id="amountMin"></span></span><br>
+        <div class="minCartContent"></div>
+        <div class="cart_links">
+          <form action="../html/checkout.html">
+            <button type="submit" class="cart-checkout1">Checkout</button>
+          </form>
+          <form action="../html/shopping_cart.html">
+            <button type="submit" class="cart-checkout2">go to cart</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -651,11 +661,11 @@
 </footer>
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/mainIndex.js"></script>
-<script src="../js/cart3.js"></script>
-<script src="../js/product.js"></script>
+<script src="../js/main_index.js"></script>
 <script src="../js/calculator.js"></script>
+<script src="../js/product.js"></script>
+<script src="../js/cart3.js"></script>
+<script src="../js/add_click.js"></script>
 </body>
 
 </html>
